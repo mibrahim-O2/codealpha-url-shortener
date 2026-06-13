@@ -1,32 +1,38 @@
 # ✂️ URL Shortener
 
-A simple URL shortener web application built with Python and Flask.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-2.x-black?logo=flask)
+![SQLite](https://img.shields.io/badge/SQLite-Database-lightblue?logo=sqlite)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![Internship](https://img.shields.io/badge/CodeAlpha-Internship-orange)
+
+A simple URL shortener web application built with **Python** and **Flask**.  
 Convert long, hard-to-share URLs into short, clean links instantly.
 
-Built as part of the **CodeAlpha Backend Development Internship**.
+> 🏢 Built as part of the **CodeAlpha Backend Development Internship**
 
 ---
 
 ## 🚀 Features
 
-- Paste any long URL and get a short link instantly
-- Click the short link to be redirected to the original URL
-- Input validation (rejects empty or malformed URLs)
-- Friendly error page for invalid short codes
-- Clean, responsive UI built with Bootstrap 5
-- Lightweight SQLite database — no setup required
+- 🔗 Paste any long URL and get a short link instantly
+- 🔀 Click the short link to be redirected to the original URL
+- ✅ Input validation — rejects empty or malformed URLs
+- ❌ Friendly 404 error page for invalid short codes
+- 🎨 Clean, responsive UI built with Bootstrap 5
+- 🗄️ Lightweight SQLite database — no setup required
 
 ---
 
 ## 🛠 Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| Python 3 | Core programming language |
-| Flask | Web framework (routing, rendering) |
-| SQLite | Database (stores URL mappings) |
-| Jinja2 | HTML templating engine |
-| Bootstrap 5 | Frontend styling and layout |
+| Technology  | Purpose                            |
+|-------------|------------------------------------|
+| Python 3    | Core programming language          |
+| Flask       | Web framework (routing, rendering) |
+| SQLite      | Database (stores URL mappings)     |
+| Jinja2      | HTML templating engine             |
+| Bootstrap 5 | Frontend styling and layout        |
 
 ---
 
@@ -48,6 +54,7 @@ codealpha-url-shortener/
 │
 └── urls.db           → SQLite database (auto-created on first run)
 ```
+
 ---
 
 ## ⚙️ Installation Steps
@@ -55,7 +62,7 @@ codealpha-url-shortener/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/codealpha-url-shortener.git
+git clone https://github.com/mibrahim-O2/codealpha-url-shortener.git
 cd codealpha-url-shortener
 ```
 
@@ -81,30 +88,36 @@ python app.py
 ```
 
 Then open your browser and visit:
+
+```
 http://localhost:5000
+```
 
 ---
 
 ## 📸 Screenshots
 
-### Home Page — URL Input Form
-[Screenshot 1 Here]
+### 🏠 Home Page — URL Input Form
+![Home Page](https://github.com/mibrahim-O2/codealpha-url-shortener/blob/main/ScreenShoots/screenshot-1-home.png?raw=true)
 
-### Result Page — Short URL Generated
-[Screenshot 2 Here]
+### ✅ Result Page — Short URL Generated
+![Result Page](https://github.com/mibrahim-O2/codealpha-url-shortener/blob/main/ScreenShoots/screenshot-2-result.png?raw=true)
 
-### Redirect — Browser Goes to Original URL
-[Screenshot 3 Here]
+### 🔀 Redirect — Browser Goes to Original URL
+![Redirect](https://github.com/mibrahim-O2/codealpha-url-shortener/blob/main/ScreenShoots/screenshot-3-redirect.png?raw=true)
 
-### 404 Page — Invalid Short Code
-[Screenshot 4 Here]
+### ❌ 404 Page — Invalid Short Code
+![404 Page](https://github.com/mibrahim-O2/codealpha-url-shortener/blob/main/ScreenShoots/screenshot-4-404.png?raw=true)
 
 ---
 
 ## 👨‍💻 Author
 
-**Ibrahim** — BS Computer Science Final Year Student
+**Muhammad Ibrahim**  
+BS Computer Science — Final Year Student  
 CodeAlpha Backend Development Internship
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Muhammad%20Ibrahim-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-ibrahim-o2)
 
 ---
 
