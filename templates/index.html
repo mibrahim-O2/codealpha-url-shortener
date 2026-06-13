@@ -1,0 +1,42 @@
+<!-- Extend base.html — this page inherits the navbar, Bootstrap, and flash messages -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card main-card">
+  <div class="card-body p-4">
+
+    <!-- Page Heading -->
+    <h2 class="card-title text-center mb-1">🔗 Shorten Your URL</h2>
+    <p class="text-center text-muted mb-4">Paste a long link. Get a short one instantly.</p>
+
+    <!-- URL Input Form -->
+    <!-- action="/shorten" sends the form data to our /shorten Flask route -->
+    <!-- method="POST" means we are sending data, not just loading a page -->
+    <form action="/shorten" method="POST">
+
+      <div class="mb-3">
+        <label for="original_url" class="form-label fw-semibold">Enter Long URL</label>
+        <input
+          type="url"
+          class="form-control form-control-lg"
+          id="original_url"
+          name="original_url"
+          placeholder="https://example.com/very/long/url"
+          required
+        />
+        <!-- 'name="original_url"' must match request.form.get("original_url") in app.py -->
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg">
+          ✂️ Shorten URL
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

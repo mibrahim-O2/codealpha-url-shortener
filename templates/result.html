@@ -1,0 +1,39 @@
+<!-- Extend base.html — same layout, navbar, Bootstrap -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card main-card">
+  <div class="card-body p-4 text-center">
+
+    <!-- Success Icon and Heading -->
+    <div class="mb-3">
+      <span style="font-size: 3rem;">✅</span>
+    </div>
+    <h3 class="card-title mb-1">URL Shortened Successfully!</h3>
+    <p class="text-muted mb-4">Your short link is ready to use.</p>
+
+    <!-- Short URL Display Box -->
+    <div class="alert alert-success p-3 mb-3">
+      <p class="mb-1 text-muted small">Your Short URL:</p>
+      <!-- short_url is passed from Flask's render_template() in app.py -->
+      <a href="{{ short_url }}" target="_blank" class="fs-5 fw-bold text-success">
+        {{ short_url }}
+      </a>
+    </div>
+
+    <!-- Original URL Display (truncated for display) -->
+    <div class="alert alert-light p-3 mb-4">
+      <p class="mb-1 text-muted small">Original URL:</p>
+      <span class="text-break small text-secondary">{{ original_url }}</span>
+    </div>
+
+    <!-- Back Button — takes user back to home page to shorten another URL -->
+    <a href="/" class="btn btn-outline-primary">
+      ← Shorten Another URL
+    </a>
+
+  </div>
+</div>
+
+{% endblock %}

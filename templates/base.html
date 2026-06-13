@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>URL Shortener</title>
+
+  <!-- Bootstrap 5 CSS — gives us ready-made styles and components -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Light grey background for the whole page */
+    body {
+      background-color: #f0f2f5;
+    }
+
+    /* The main card that holds the content */
+    .main-card {
+      max-width: 600px;
+      margin: 80px auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style the navbar brand/title */
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+      <!-- Clicking the brand takes user back to home page -->
+      <a class="navbar-brand" href="/">✂️ URL Shortener</a>
+    </div>
+  </nav>
+
+  <!-- ── Flash Messages ── -->
+  <!-- These show alerts (success/error) from Flask's flash() function -->
+  <div class="container mt-3" style="max-width: 600px;">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+
+  <!-- ── Page Content ── -->
+  <!-- Child templates fill this block with their own content -->
+  {% block content %}{% endblock %}
+
+  <!-- Bootstrap 5 JS — needed for dismissible alerts to work -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
